@@ -1,0 +1,232 @@
+Generated at 2017-11-23 12:51:56 +0000
+Mixlib::ShellOut::ShellCommandFailed: apt_update[Update the apt cache daily] (learn_chef_apache2::default line 6) had an error: Mixlib::ShellOut::ShellCommandFailed: execute[apt-get -q update] (/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/provider/apt_update.rb line 74) had an error: Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '100'
+---- Begin output of apt-get -q update ----
+STDOUT: Hit http://security.ubuntu.com trusty-security InRelease
+Ign http://archive.ubuntu.com trusty InRelease
+Hit http://archive.ubuntu.com trusty-updates InRelease
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit http://archive.ubuntu.com trusty-updates/main Sources
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/universe Sources
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://archive.ubuntu.com trusty-backports/main Sources
+Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://archive.ubuntu.com trusty-backports/universe Sources
+Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://archive.ubuntu.com trusty Release
+Get:1 http://archive.ubuntu.com trusty/main Sources [1,064 kB]
+Get:2 http://archive.ubuntu.com trusty/restricted Sources [5,433 B]
+Get:3 http://archive.ubuntu.com trusty/universe Sources [6,399 kB]
+Get:4 http://archive.ubuntu.com trusty/multiverse Sources [174 kB]
+Get:5 http://archive.ubuntu.com trusty/main amd64 Packages [14 B]
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 7,642 kB in 5min 39s (22.5 kB/s)
+STDERR: W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/trusty/main/binary-amd64/Packages  Hash Sum mismatch
+
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+---- End output of apt-get -q update ----
+Ran apt-get -q update returned 100
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/mixlib-shellout-2.3.2/lib/mixlib/shellout.rb:293:in `invalid!'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/mixlib-shellout-2.3.2/lib/mixlib/shellout.rb:280:in `error!'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/mixin/shell_out.rb:130:in `shell_out_with_systems_locale!'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/provider/execute.rb:58:in `block in action_run'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/mixin/why_run.rb:52:in `add_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/provider.rb:202:in `converge_by'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/provider/execute.rb:56:in `action_run'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/provider.rb:171:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource.rb:591:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:70:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:98:in `block (2 levels) in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:98:in `each'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:98:in `block in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/resource_list.rb:94:in `block in execute_each_resource'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:114:in `call_iterator_block'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:85:in `step'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:103:in `iterate'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/resource_list.rb:92:in `execute_each_resource'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:97:in `converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/provider.rb:212:in `compile_and_converge_action'
+(eval):2:in `action_periodic'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/provider.rb:171:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource.rb:591:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:70:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:98:in `block (2 levels) in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:98:in `each'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:98:in `block in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/resource_list.rb:94:in `block in execute_each_resource'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:114:in `call_iterator_block'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:85:in `step'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:103:in `iterate'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/resource_list.rb:92:in `execute_each_resource'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:97:in `converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/client.rb:715:in `block in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/client.rb:710:in `catch'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/client.rb:710:in `converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/client.rb:749:in `converge_and_save'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/client.rb:286:in `run'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application.rb:291:in `block in fork_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application.rb:279:in `fork'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application.rb:279:in `fork_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application.rb:244:in `block in run_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/local_mode.rb:44:in `with_server_connectivity'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application.rb:232:in `run_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application/client.rb:469:in `sleep_then_run_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application/client.rb:458:in `block in interval_run_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application/client.rb:457:in `loop'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application/client.rb:457:in `interval_run_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application/client.rb:441:in `run_application'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application.rb:59:in `run'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/bin/chef-client:26:in `<top (required)>'
+/usr/bin/chef-client:267:in `load'
+/usr/bin/chef-client:267:in `<main>'
+
+>>>> Caused by Mixlib::ShellOut::ShellCommandFailed: Expected process to exit with [0], but received '100'
+---- Begin output of apt-get -q update ----
+STDOUT: Hit http://security.ubuntu.com trusty-security InRelease
+Ign http://archive.ubuntu.com trusty InRelease
+Hit http://archive.ubuntu.com trusty-updates InRelease
+Hit http://archive.ubuntu.com trusty-backports InRelease
+Hit http://security.ubuntu.com trusty-security/main Sources
+Hit http://archive.ubuntu.com trusty Release.gpg
+Hit http://archive.ubuntu.com trusty-updates/main Sources
+Hit http://security.ubuntu.com trusty-security/universe Sources
+Hit http://archive.ubuntu.com trusty-updates/restricted Sources
+Hit http://security.ubuntu.com trusty-security/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/universe Sources
+Hit http://security.ubuntu.com trusty-security/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/multiverse Sources
+Hit http://security.ubuntu.com trusty-security/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/main amd64 Packages
+Hit http://security.ubuntu.com trusty-security/universe Translation-en
+Hit http://archive.ubuntu.com trusty-updates/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-updates/main Translation-en
+Hit http://archive.ubuntu.com trusty-updates/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-updates/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-updates/universe Translation-en
+Hit http://archive.ubuntu.com trusty-backports/main Sources
+Hit http://archive.ubuntu.com trusty-backports/restricted Sources
+Hit http://archive.ubuntu.com trusty-backports/universe Sources
+Hit http://archive.ubuntu.com trusty-backports/multiverse Sources
+Hit http://archive.ubuntu.com trusty-backports/main amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty-backports/main Translation-en
+Hit http://archive.ubuntu.com trusty-backports/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty-backports/restricted Translation-en
+Hit http://archive.ubuntu.com trusty-backports/universe Translation-en
+Hit http://archive.ubuntu.com trusty Release
+Get:1 http://archive.ubuntu.com trusty/main Sources [1,064 kB]
+Get:2 http://archive.ubuntu.com trusty/restricted Sources [5,433 B]
+Get:3 http://archive.ubuntu.com trusty/universe Sources [6,399 kB]
+Get:4 http://archive.ubuntu.com trusty/multiverse Sources [174 kB]
+Get:5 http://archive.ubuntu.com trusty/main amd64 Packages [14 B]
+Hit http://archive.ubuntu.com trusty/restricted amd64 Packages
+Hit http://archive.ubuntu.com trusty/universe amd64 Packages
+Hit http://archive.ubuntu.com trusty/multiverse amd64 Packages
+Hit http://archive.ubuntu.com trusty/main Translation-en
+Hit http://archive.ubuntu.com trusty/multiverse Translation-en
+Hit http://archive.ubuntu.com trusty/restricted Translation-en
+Hit http://archive.ubuntu.com trusty/universe Translation-en
+Ign http://archive.ubuntu.com trusty/main Translation-en_US
+Ign http://archive.ubuntu.com trusty/multiverse Translation-en_US
+Ign http://archive.ubuntu.com trusty/restricted Translation-en_US
+Ign http://archive.ubuntu.com trusty/universe Translation-en_US
+Fetched 7,642 kB in 5min 39s (22.5 kB/s)
+STDERR: W: Failed to fetch http://archive.ubuntu.com/ubuntu/dists/trusty/main/binary-amd64/Packages  Hash Sum mismatch
+
+E: Some index files failed to download. They have been ignored, or old ones used instead.
+---- End output of apt-get -q update ----
+Ran apt-get -q update returned 100
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/mixlib-shellout-2.3.2/lib/mixlib/shellout.rb:293:in `invalid!'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/mixlib-shellout-2.3.2/lib/mixlib/shellout.rb:280:in `error!'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/mixin/shell_out.rb:130:in `shell_out_with_systems_locale!'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/provider/execute.rb:58:in `block in action_run'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/mixin/why_run.rb:52:in `add_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/provider.rb:202:in `converge_by'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/provider/execute.rb:56:in `action_run'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/provider.rb:171:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource.rb:591:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:70:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:98:in `block (2 levels) in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:98:in `each'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:98:in `block in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/resource_list.rb:94:in `block in execute_each_resource'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:114:in `call_iterator_block'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:85:in `step'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:103:in `iterate'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/resource_list.rb:92:in `execute_each_resource'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:97:in `converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/provider.rb:212:in `compile_and_converge_action'
+(eval):2:in `action_periodic'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/provider.rb:171:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource.rb:591:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:70:in `run_action'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:98:in `block (2 levels) in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:98:in `each'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:98:in `block in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/resource_list.rb:94:in `block in execute_each_resource'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:114:in `call_iterator_block'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:85:in `step'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:103:in `iterate'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/stepable_iterator.rb:55:in `each_with_index'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/resource_collection/resource_list.rb:92:in `execute_each_resource'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/runner.rb:97:in `converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/client.rb:715:in `block in converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/client.rb:710:in `catch'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/client.rb:710:in `converge'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/client.rb:749:in `converge_and_save'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/client.rb:286:in `run'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application.rb:291:in `block in fork_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application.rb:279:in `fork'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application.rb:279:in `fork_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application.rb:244:in `block in run_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/local_mode.rb:44:in `with_server_connectivity'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application.rb:232:in `run_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application/client.rb:469:in `sleep_then_run_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application/client.rb:458:in `block in interval_run_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application/client.rb:457:in `loop'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application/client.rb:457:in `interval_run_chef_client'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application/client.rb:441:in `run_application'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/lib/chef/application.rb:59:in `run'
+/opt/chefdk/embedded/lib/ruby/gems/2.4.0/gems/chef-13.4.19/bin/chef-client:26:in `<top (required)>'
+/usr/bin/chef-client:267:in `load'
+/usr/bin/chef-client:267:in `<main>'
