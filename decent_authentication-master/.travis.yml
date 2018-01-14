@@ -1,0 +1,24 @@
+language: ruby
+
+before_install:
+  - gem update --system
+  - gem --version
+
+before_script: "./script/ci/before.sh"
+
+rvm:
+  - 2.5.0
+
+env:
+  - DB=postgres
+
+script:
+  - RAILS_ENV=test bundle exec rake db:migrate spec --trace
+
+notifications:
+  email:
+    - jeremyleesmith@gmail.com
+
+addons:
+  code_climate:
+    repo_token: ee12135fbfd5a5486a4f7037951315a2c1a47fd3b854b2a8097b68b6bf129696
